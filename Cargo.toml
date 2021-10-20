@@ -1,0 +1,17 @@
+[package]
+name = "geo-url-select"
+version = "0.1.0"
+edition = "2018"
+
+build = "build.rs"
+
+[build-dependencies]
+embed-resource = "1.4"
+windows = "0.21.1"
+
+[dependencies]
+native-windows-gui = "1.0.12"
+native-windows-derive = "1.0.3"
+open = "1"
+regex = "1"
+windows = "0.21.1"

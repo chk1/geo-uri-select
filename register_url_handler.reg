@@ -1,0 +1,37 @@
+Windows Registry Editor Version 5.00
+
+;
+; register geo: and bingmaps: URI capabilites
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\GeoUrlSelect\Capabilities\URLAssociations]
+"geo"="GeoUrlSelectURL"
+"bingmaps"="GeoUrlSelectURL"
+
+;
+; create GeoUrlSelectURL "intermediate" URL handler
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\GeoUrlSelectURL]
+"URL Protocol"=""
+@="URL:geo"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\GeoUrlSelectURL\DefaultIcon]
+@="\"C:\\Program Files\\GeoUrlSelect\\geo-url-select.exe\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\GeoUrlSelectURL\shell\open\command]
+@="\"C:\\Program Files\\GeoUrlSelect\\geo-url-select.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications]
+"GeoUrlSelect"="Software\\GeoUrlSelect\\Capabilities"
+
+;
+; register directly to geo: handler
+;
+; [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\geo]
+; "URL Protocol"=""
+; @="URL:geo"
+; 
+; [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\geo\DefaultIcon]
+; @="\"C:\\Program Files\\GeoUrlSelect\\geo-url-select.exe\""
+; 
+; [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\geo\shell\open\command]
+; @="\"C:\\Program Files\\GeoUrlSelect\\geo-url-select.exe\" \"%1\""
