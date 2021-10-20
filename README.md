@@ -6,22 +6,24 @@ Some applications hardcode their location functionality to `bingmaps:` URIs, whi
 
 Map providers currently include:
 - OpenStreetMap
+- Google Maps
 - Bing Maps
 - Bing Maps Windows 10 App
-- Google Maps
 - Yandex
 
 ![Screenshot showing the user interface](screenshot.png)
 
 ## Installation
 
-Copy `geo-url-select.exe` to `C:\\Program Files\\GeoUrlSelect\\geo-url-select.exe`. 
+Copy `geo-url-select.exe` to `C:\Program Files\GeoUrlSelect\geo-url-select.exe`. 
 
-Then run `register_url_handler.exe` to create the necessary registry keys, so that you can select the program from the Windows 10 Default Programs settings dialogue.
+Then run `register_url_handler.reg` to create the necessary registry keys, so that you can select the program from the Windows 10 Default Programs settings dialogue.
 
-If you want to place the .exe in another location, update the path in the .reg file (or directly in your registry) accordingly.
+If you want to place the .exe in another location, update the path in the .reg file accordingly (or directly in the registry).
 
 ## Building
+
+You can build the project by running the following command:
 
 ```
 cargo build --release
@@ -39,10 +41,11 @@ Possible further work:
 - "Copy to clipboard" function
 - Exit application after click, with setting
 - A proper automated setup
+- A nicer icon
 
 ## Resources
 
-Registerin a URL Handlers:
+Registering a Windows URL handler:
 - https://jorgen.tjer.no/post/2021/03/13/registering-a-rust-program-as-a-browser-on-windows/
 - https://github.com/jorgenpt/bichrome/blob/04e8a4476105501032121c05f487f592c6ca68ce/src/windows.rs#L53
 - https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-uri-activation
